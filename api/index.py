@@ -73,3 +73,9 @@ def interactions():
         })
 
     return jsonify({"type": 4, "data": {"content": "Unknown command"}})
+
+    # Tambahkan ini di paling bawah file api/index.py
+@app.route("/", methods=["GET"])
+@app.route("/api/index", methods=["GET"])
+def home():
+    return "Bot Prof Sema API is running!"
