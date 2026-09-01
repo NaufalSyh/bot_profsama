@@ -1,14 +1,8 @@
 {
-  "builds": [
+  "rewrites": [
     {
-      "src": "keep_alive.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "keep_alive.py"
+      "source": "/(.*)",
+      "destination": "/api/index.py"
     }
   ]
 }
